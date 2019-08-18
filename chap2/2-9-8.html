@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>分類：{{selectedCategory}}</p>
+        <select v-model="category" multiple>
+            <option value="宿泊費">宿泊費</option>
+            <option value="食費">食費</option>
+            <option value="交通費">交通費</option>
+        </select>
+    </div>
+</body>
+<script src="../vue.js"></script>
+<script src="2-9-8.js"></script>
+
+</html>
