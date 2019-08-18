@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>テキストボックス</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-on:input="yearInputHandler" v-bind:value="year">
+        <p>{{year}}</p>
+    </div>
+</body>
+<script src="../vue.js"></script>
+<script src="2-9-2.js"></script>
+</html>
