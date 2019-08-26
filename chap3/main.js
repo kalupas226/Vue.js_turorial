@@ -13,6 +13,7 @@ var app = new Vue({
         sortOrder: 1,
         // 商品リスト
         products: [{
+                id: 1,
                 name: 'Michael<br>スマホケース',
                 price: 1580,
                 image: 'images/01.jpg',
@@ -20,6 +21,7 @@ var app = new Vue({
                 isSale: true
             },
             {
+                id: 2,
                 name: 'Raphael<br>スマホケース',
                 price: 1580,
                 image: 'images/02.jpg',
@@ -27,6 +29,7 @@ var app = new Vue({
                 isSale: true
             },
             {
+                id: 3,
                 name: 'Gabriel<br>スマホケース',
                 price: 1580,
                 image: 'images/03.jpg',
@@ -34,6 +37,7 @@ var app = new Vue({
                 isSale: true
             },
             {
+                id: 4,
                 name: 'Uriel<br>スマホケース',
                 price: 980,
                 image: 'images/04.jpg',
@@ -41,6 +45,7 @@ var app = new Vue({
                 isSale: true
             },
             {
+                id: 5,
                 name: 'Ariel<br>スマホケース',
                 price: 980,
                 image: 'images/05.jpg',
@@ -48,6 +53,7 @@ var app = new Vue({
                 isSale: false
             },
             {
+                id: 6,
                 name: 'Azrael<br>スマホケース',
                 price: 1580,
                 image: 'images/06.jpg',
@@ -78,10 +84,19 @@ var app = new Vue({
                     newList.push(this.products[i]);
                 }
             }
+            // 新しい配列を並び替える
+            if (this.sortOrder == 1) {
+                // 元の順番にpushしているので並び替え済み
+            } else if (this.sortOrder == 2) {
+                // 価格が安い順に並び替える
+                newList.sort(function (a, b) {
+                    return a.price - b.price;
+                });
+            }
             // 絞り込み後の商品リストを返す
             return newList;
         },
-        count: function() {
+        count: function () {
             return this.filteredList.length;
         }
     }
