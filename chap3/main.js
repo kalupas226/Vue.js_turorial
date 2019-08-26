@@ -5,8 +5,6 @@ Vue.filter('number_format', function (val) {
 var app = new Vue({
     el: '#app',
     data: {
-        // 表示中の商品数
-        count: 0,
         // 「セール対象」のチェック状態（true: チェックあり、false: チェックなし）
         showSaleItem: false,
         // 「送料無料」のチェック状態（true: チェックあり、false： チェックなし）
@@ -58,18 +56,6 @@ var app = new Vue({
             }
         ]
     },
-    // watch: {
-    //     // 「セール対象」チェックボックスの状態を監視するウォッチャ
-    //     showSaleItem: function (newVal, oldVal) {
-    //         // ここでproductsの配列を書き換える
-    //         console.log('showSaleItemウォッチャが呼び出されました。');
-    //     },
-    //     // 「送料無料」チェックボックスの状態を監視するウォッチャ
-    //     showDelvFree: function (newVal, oldVal) {
-    //         // ここでproductsの配列を書き換える
-    //         console.log('showDelvFreeウォッチャが呼び出されました。');
-    //     }
-    // },
     computed: {
         // 絞り込み後の商品リストを返す算出プロパティ
         filteredList: function () {
