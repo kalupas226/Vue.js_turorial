@@ -13,7 +13,11 @@ var app = new Vue({
         // 「並び替え」の選択値
         sortOrder: 1,
         // 商品リスト
-        products: []
+        products: [],
+        // エラーの有無
+        isError: false,
+        // メッセージ
+        message: ''
     },
     // ライフサイクルハック
     created: function () {
