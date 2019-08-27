@@ -35,8 +35,9 @@ var app = new Vue({
                 this.products = data;
             }.bind(this))
             .fail(function (jqXHR, textStatus, errorThrown) {
-                console.log('通信が失敗しました');
-            });
+                this.isError = true;
+                this.message = '商品リストの読み込みに失敗しました。';
+            }.bind(this));
     },
     computed: {
         // 絞り込み後の商品リストを返す算出プロパティ
